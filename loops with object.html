@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loops with Object</title>
+<script>
+function showData() {
+
+    var student = {name:"Ram", age:19, course:"BTech"};
+
+    document.write("<h3>Using for-in loop</h3>");
+    for (var key in student) {
+        document.write(key + " : " + student[key] + "<br>");
+    }
+
+    var subjects = ["Java", "Python", "HTML"];
+
+    document.write("<h3>Using for-each loop</h3>");
+    subjects.forEach(function(sub) {
+        document.write(sub + "<br>");
+    });
+
+    document.write("<h3>Using for-of loop</h3>");
+    for (var s of subjects) {
+        document.write(s + "<br>");
+    }
+}
+</script>
+</head>
+
+<body onload="showData()">
+</body>
+</html>

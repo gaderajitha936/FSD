@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Armstrong Number</title>
+<script>
+function checkArmstrong() {
+    var num = parseInt(prompt("Enter a number:"));
+    var temp = num;
+    var sum = 0;
+    var digit;
+
+    while (temp > 0) {
+        digit = temp % 10;
+        sum = sum + (digit * digit * digit);
+        temp = Math.floor(temp / 10);
+    }
+
+    if (sum == num) {
+        document.write("<h1>" + num + " is an Armstrong Number</h1>");
+    } else {
+        document.write("<h1>" + num + " is not an Armstrong Number</h1>");
+    }
+}
+</script>
+</head>
+
+<body onload="checkArmstrong()">
+</body>
+</html>

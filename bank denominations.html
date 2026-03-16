@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank Denomination</title>
+<script>
+function showDenomination() {
+    var amount = parseInt(prompt("Enter the deposited amount:"));
+
+    var n100 = Math.floor(amount / 100);
+    amount = amount % 100;
+
+    var n50 = Math.floor(amount / 50);
+    amount = amount % 50;
+
+    var n20 = Math.floor(amount / 20);
+    amount = amount % 20;
+
+    var n10 = Math.floor(amount / 10);
+    amount = amount % 10;
+
+    var n5 = Math.floor(amount / 5);
+    amount = amount % 5;
+
+    var n2 = Math.floor(amount / 2);
+    amount = amount % 2;
+
+    var n1 = amount;
+
+    document.write("<h2>Denominations</h2>");
+    if(n100>0) document.write(n100 + " - 100's <br>");
+    if(n50>0) document.write(n50 + " - 50's <br>");
+    if(n20>0) document.write(n20 + " - 20's <br>");
+    if(n10>0) document.write(n10 + " - 10's <br>");
+    if(n5>0) document.write(n5 + " - 5's <br>");
+    if(n2>0) document.write(n2 + " - 2's <br>");
+    if(n1>0) document.write(n1 + " - 1's <br>");
+}
+</script>
+</head>
+
+<body onload="showDenomination()">
+</body>
+</html>
