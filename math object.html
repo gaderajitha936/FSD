@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+
+<h2>Math Object Demo</h2>
+<p id="demo"></p>
+
+<button onclick="mathDemo()">Click Me</button>
+
+<script>
+function mathDemo() {
+    let pi = Math.PI;              
+    let squareRoot = Math.sqrt(16);
+    let power = Math.pow(2, 3);    
+    let randomNum = Math.random(); 
+    let rounded = Math.round(4.6); 
+
+    document.getElementById("demo").innerHTML =
+        "PI: " + pi + "<br>" +
+        "Square Root of 16: " + squareRoot + "<br>" +
+        "2^3: " + power + "<br>" +
+        "Random Number: " + randomNum + "<br>" +
+        "Rounded Value of 4.6: " + rounded;
+}
+</script>
+
+</body>
+</html>

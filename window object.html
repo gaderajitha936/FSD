@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Example</title>
+</head>
+<body>
+
+<h2>Window Object Demo</h2>
+
+<button onclick="showAlert()">Alert</button>
+<button onclick="getName()">Prompt</button>
+<button onclick="checkConfirm()">Confirm</button>
+<button onclick="openWindow()">Open Window</button>
+
+<script>
+    function showAlert() {
+        window.alert("Hello! This is an alert box");
+    }
+
+    function getName() {
+        let name = window.prompt("Enter your name:");
+        alert("Welcome " + name);
+    }
+
+    function checkConfirm() {
+        let result = window.confirm("Are you sure?");
+        if(result) {
+            alert("You pressed OK");
+        } else {
+            alert("You pressed Cancel");
+        }
+    }
+
+    function openWindow() {
+        window.open("https://www.google.com");
+    }
+</script>
+
+</body>
+</html>

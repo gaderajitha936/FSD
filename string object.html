@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+</head>
+<body>
+
+<h2>String Object Demo</h2>
+<p id="demo"></p>
+
+<button onclick="stringDemo()">Click Me</button>
+
+<script>
+function stringDemo() {
+    let str = "Hello JavaScript";
+
+    let len = str.length;                  
+    let upper = str.toUpperCase();         
+    let lower = str.toLowerCase();         
+    let position = str.indexOf("JavaScript"); 
+    let sub = str.substring(0, 5);         
+
+    document.getElementById("demo").innerHTML =
+        "Original String: " + str + "<br>" +
+        "Length: " + len + "<br>" +
+        "Uppercase: " + upper + "<br>" +
+        "Lowercase: " + lower + "<br>" +
+        "Position of 'JavaScript': " + position + "<br>" +
+        "Substring (0-5): " + sub;
+}
+</script>
+
+</body>
+</html>

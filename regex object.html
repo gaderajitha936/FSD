@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+</head>
+<body>
+
+<h2>RegExp Object Demo</h2>
+<p id="demo"></p>
+
+<button onclick="regexDemo()">Click Me</button>
+
+<script>
+function regexDemo() {
+    let text = "Hello 123 JavaScript";
+
+    let pattern = /[0-9]+/;
+
+    let result1 = pattern.test(text);
+
+    let result2 = pattern.exec(text);
+
+    let result3 = text.match(pattern);
+
+    let result4 = text.replace(pattern, "###");
+
+    document.getElementById("demo").innerHTML =
+        "Text: " + text + "<br>" +
+        "Contains number (test): " + result1 + "<br>" +
+        "First match (exec): " + result2 + "<br>" +
+        "Match (match): " + result3 + "<br>" +
+        "After replace: " + result4;
+}
+</script>
+
+</body>
+</html>
